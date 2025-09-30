@@ -1,0 +1,85 @@
+.shell powershell
+
+# Reload whkd configuration
+# win + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+win + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+win + shift + o         : komorebic reload-configuration
+
+win + i                 : komorebic toggle-shortcuts
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+win + return            : wt                    # Windows Terminal
+win + s                 : start spotify         # Spotify
+win + n                 : Start-Process "$env:LOCALAPPDATA\Programs\obsidian\Obsidian.exe" # Obsidian
+
+win + q                 : komorebic close
+win + m                 : komorebic minimize
+win + shift + m         : komorebic manage
+
+# Focus windows
+win + left              : komorebic focus left
+win + down              : komorebic focus down
+win + up                : komorebic focus up
+win + right             : komorebic focus right
+win + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
+win + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
+
+# Move windows
+win + shift + left      : komorebic move left
+win + shift + down      : komorebic move down
+win + shift + up        : komorebic move up
+win + shift + right     : komorebic move right
+win + shift + return    : komorebic promote
+
+# Stack windows
+win + ctrl + left       : komorebic stack left
+win + ctrl + down       : komorebic stack down
+win + ctrl + up         : komorebic stack up
+win + ctrl + right      : komorebic stack right
+win + oem_1             : komorebic unstack # oem_1 is ;
+win + oem_4             : komorebic cycle-stack previous # oem_4 is [
+win + oem_6             : komorebic cycle-stack next # oem_6 is ]
+
+# Resize
+win + oem_plus          : komorebic resize-axis horizontal increase
+win + oem_minus         : komorebic resize-axis horizontal decrease
+win + shift + oem_plus  : komorebic resize-axis vertical increase
+win + shift + oem_minus : komorebic resize-axis vertical decrease
+
+# Manipulate windows
+win + t                 : komorebic toggle-float
+win + shift + f         : komorebic toggle-monocle
+
+# Window manager options
+win + shift + r         : komorebic retile
+win + p                 : komorebic toggle-pause
+
+# Layouts
+win + x                 : komorebic flip-layout horizontal
+win + y                 : komorebic flip-layout vertical
+win + ctrl + r          : komorebic change-layout rows          # Horizontal rows (vertical stack)
+win + ctrl + c          : komorebic change-layout columns       # Vertical columns (horizontal side-by-side)
+win + ctrl + b          : komorebic change-layout bsp
+win + ctrl + h          : komorebic flip-layout horizontal
+win + ctrl + v          : komorebic flip-layout vertical
+
+# Workspaces
+win + 1                 : komorebic focus-workspace 0
+win + 2                 : komorebic focus-workspace 1
+win + 3                 : komorebic focus-workspace 2
+win + 4                 : komorebic focus-workspace 3
+win + 5                 : komorebic focus-workspace 4
+win + 6                 : komorebic focus-workspace 5
+win + 7                 : komorebic focus-workspace 6
+win + 8                 : komorebic focus-workspace 7
+
+# Move windows across workspaces
+win + shift + 1         : komorebic move-to-workspace 0
+win + shift + 2         : komorebic move-to-workspace 1
+win + shift + 3         : komorebic move-to-workspace 2
+win + shift + 4         : komorebic move-to-workspace 3
+win + shift + 5         : komorebic move-to-workspace 4
+win + shift + 6         : komorebic move-to-workspace 5
+win + shift + 7         : komorebic move-to-workspace 6
+win + shift + 8         : komorebic move-to-workspace 7

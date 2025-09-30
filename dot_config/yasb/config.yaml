@@ -1,0 +1,651 @@
+watch_stylesheet: false
+watch_config: false
+debug: false
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: true
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: true
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+      hide_on_fullscreen: true
+    dimensions:
+      width: "100%"
+      height: 24
+    padding:
+      top: 8
+      right: 8
+      left: 8
+      bottom: -4
+    widgets:
+      left: ["home", "komorebi_workspaces", "taskbar", "active_window", "cava"]
+      center: ["clock"]
+      right:
+        [
+          "media",
+          "volume",
+          "microphone",
+          "weather",
+          "github",
+          "pomodoro",
+          "todos",
+          "disk",
+          "wallpapers",
+          "systray",
+          "power_menu",
+        ]
+widgets:
+  home:
+    type: "yasb.home.HomeWidget"
+    options:
+      label: "<span>\udb80\udf5c</span>"
+      menu_list:
+        - { title: "Home", path: "~" }
+        - { title: "Downloads", path: "~\\Downloads" }
+        - { title: "Documents", path: "~\\Documents" }
+        - { title: "Pictures", path: "~\\Pictures" }
+        - { title: "Videos", path: "~\\Videos" }
+      system_menu: true
+      power_menu: false
+      blur: true
+      round_corners: true
+      round_corners_type: "normal"
+      border_color: ""
+      distance: 10
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      alignment: "left"
+      direction: "down"
+      menu_labels:
+        shutdown: "Shutdown"
+        restart: "Restart"
+        logout: "Logout"
+        lock: "Lock"
+        sleep: "Sleep"
+        system: "System Settings"
+        about: "About This PC"
+        task_manager: "Task Manager"
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "\u26a1 Offline"
+      label_workspace_btn: "{index}"
+      label_workspace_active_btn: "{index}"
+      label_workspace_populated_btn: "{index}"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: false
+      animation: true
+      container_padding:
+        top: 0
+        left: 4
+        bottom: 0
+        right: 4
+      container_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      api_key: "env"
+      show_alerts: true
+      tooltip: true
+      update_interval: 600 # Update interval in seconds, Min 600 seconds
+      hide_decimal: true
+      units: "metric" # Can be 'metric' or 'imperial'
+      location: "env"
+      callbacks:
+        on_left: "toggle_card"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      icons:
+        sunnyDay: "\ue30d"
+        clearNight: "\ue32b"
+        cloudyDay: "\ue312"
+        cloudyNight: "\ue311"
+        rainyDay: "\ue308"
+        rainyNight: "\ue333"
+        snowyIcyDay: "\ue30a"
+        snowyIcyNight: "\ue335"
+        blizzardDay: "\udb83\udf36"
+        blizzardNight: "\udb83\udf36"
+        foggyDay: "\ue303"
+        foggyNight: "\ue346"
+        thunderstormDay: "\ue30f"
+        thunderstormNight: "\ue338"
+        default: "\uebaa"
+      weather_card:
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        icon_size: 64
+        show_hourly_forecast: True # Set to False to disable hourly forecast
+        time_format: "24h" # can be 12h or 24h
+        hourly_point_spacing: 76
+        hourly_icon_size: 32 # better to set 16, 32 or 64 for better quality
+        icon_smoothing: true # should be true for smoother icon or false for sharper icon if using 16, 32 or 64 for hourly_icon_size
+        temp_line_width: 2 # can be 0 to hide the temperature line
+        current_line_color: "#8EAEE8"
+        current_line_width: 1 # can be 0 to hide the current hour line
+        current_line_style: "dot"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title} - {artist}"
+      label_alt: "{artist} | {title}"
+      max_field_size:
+        label: 35
+        label_alt: 40
+        truncate_whole_label: false
+      show_thumbnail: true
+      controls_only: false
+      controls_left: true
+      controls_hide: false
+      hide_empty: true
+      thumbnail_alpha: 180
+      thumbnail_padding: 6
+      thumbnail_corner_radius: 12
+      symmetric_corner_radius: true
+      thumbnail_edge_fade: true
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 50
+        style: "left"
+        separator: " • "
+        label_padding: 2
+      icons:
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "toggle_play_pause"
+        on_right: "toggle_media_menu"
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 300
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 12
+        thumbnail_size: 140
+        max_title_size: 60
+        max_artist_size: 40
+        show_source: true
+      media_menu_icons:
+        play: "\ue768"
+        pause: "\ue769"
+        prev_track: "\ue892"
+        next_track: "\ue893"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: "🖥️ Desktop"
+      label_icon: true
+      label_icon_size: 15
+      max_length: 20
+      max_length_ellipsis: "…"
+      monitor_exclusive: true
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 250
+      label_shadow:
+        enabled: true
+        color: "rgba(0, 0, 0, 0.8)"
+        radius: 3
+        offset: [1, 1]
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 16
+      tooltip: true
+      animation:
+        enabled: true
+        duration: 200
+        type: "fadeInOut"
+      title_label:
+        enabled: false
+        show: "focused"
+        min_length: 10
+        max_length: 30
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: ["WorkerW", "Progman"]
+      container_padding:
+        top: 0
+        left: 4
+        bottom: 0
+        right: 4
+      callbacks:
+        on_left: "toggle_window"
+        on_middle: "do_nothing"
+        on_right: "close_app"
+      monitor_exclusive: false
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume[percent]}%"
+      scroll_step: 3
+      volume_icons:
+        - "\ueee8" # Icon for muted
+        - "\uf026" # Icon for 0-10% volume
+        - "\uf027" # Icon for 11-30% volume
+        - "\uf027" # Icon for 31-60% volume
+        - "\uf028" # Icon for 61-100% volume
+      callbacks:
+        on_left: "toggle_volume_menu"
+        on_middle: "toggle_label"
+        on_right: "toggle_mute"
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 250
+      progress_bar:
+        enabled: true
+        position: "left"
+        size: 16
+        thickness: 3
+        color: ["#74c7ec", "#89b4fa"]
+        background_color: "#45475a"
+        animation: true
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  microphone:
+    type: "yasb.microphone.MicrophoneWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {level}%"
+      mute_text: "mute"
+      tooltip: true
+      scroll_step: 3
+      icons:
+        normal: "\uf130"
+        muted: "\uf131"
+      mic_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_mic_menu"
+        on_middle: "toggle_label"
+        on_right: "toggle_mute"
+      container_padding:
+        top: 0
+        left: 6
+        bottom: 0
+        right: 6
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+      progress_bar:
+        enabled: true
+        position: "left"
+        size: 16
+        thickness: 3
+        color: ["#f38ba8", "#eba0ac"]
+        background_color: "#45475a"
+        animation: true
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a %b %d %H:%M}"
+      label_alt: "{%A, %d %B %Y %H:%M:%S}"
+      update_interval: 1000
+      timezones: []
+      icons:
+        clock_01: "\uf017"
+        clock_02: "\uf017"
+        clock_03: "\uf017"
+        clock_04: "\uf017"
+        clock_05: "\uf017"
+        clock_06: "\uf017"
+        clock_07: "\uf017"
+        clock_08: "\uf017"
+        clock_09: "\uf017"
+        clock_10: "\uf017"
+        clock_11: "\uf017"
+        clock_12: "\uf017"
+      callbacks:
+        on_left: "toggle_calendar"
+        on_middle: "toggle_label"
+        on_right: "toggle_label"
+      calendar:
+        alignment: "center"
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  disk:
+    type: "yasb.disk.DiskWidget"
+    options:
+      label: "<span>\uf473</span>"
+      label_alt: "<span>\uf473</span>"
+      update_interval: 60
+      group_label:
+        volume_labels: ["C", "D", "E", "F"]
+        show_label_name: false
+        blur: True
+        round_corners: True
+        round_corners_type: "small"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        distance: 6
+      callbacks:
+        on_left: "toggle_group"
+        on_middle: "toggle_label"
+        on_right: "exec explorer C:\\" # Open disk C in file explorer
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\udb83\ude09</span>"
+      image_path: "C:\\Users\\Abdulazizxoja\\Pictures\\Wallpapers"
+      change_automatically: false
+      update_interval: 60
+      tooltip: true
+      gallery:
+        enabled: true
+        blur: true
+        image_width: 320
+        image_per_page: 8
+        show_buttons: true
+        orientation: "portrait"
+        image_spacing: 12
+        lazy_load: true
+        lazy_load_delay: 8
+        lazy_load_fadein: 300
+        image_corner_radius: 16
+        enable_cache: true
+      run_after: []
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 250
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "▼"
+      label_expanded: "▶"
+      label_position: "left"
+      icon_size: 16
+      pin_click_modifier: "alt"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      tooltip: true
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  pomodoro:
+    type: "yasb.pomodoro.PomodoroWidget"
+    options:
+      label: "<span>{icon}</span> {remaining}"
+      label_alt: "<span>{icon}</span> {session}/{total_sessions} - {status}"
+      work_duration: 25
+      break_duration: 5
+      long_break_duration: 15
+      long_break_interval: 4
+      auto_start_breaks: true
+      auto_start_work: true
+      sound_notification: true
+      show_notification: true
+      hide_on_break: false
+      session_target: 8
+      icons:
+        work: "\uf252"
+        break: "\uf253"
+        paused: "\uf254"
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        circle_background_color: "#09ffffff"
+        circle_work_progress_color: "#a6e3a1"
+        circle_break_progress_color: "#89b4fa"
+        circle_thickness: 8
+        circle_size: 160
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "reset_timer"
+        on_right: "toggle_label"
+      progress_bar:
+        enabled: true
+        position: "left"
+        size: 14
+        thickness: 3
+        color: ["#a6e3a1", "#74c7ec"]
+        background_color: "#45475a"
+        animation: true
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 250 # Milisecond
+      button_row: 5 # Number of buttons in row, min 1 max 5
+      buttons:
+        signout: ["\udb80\udf43", "Sign out"]
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        hibernate: ["\uf28e", "Hibernate"]
+        cancel: ["\udb81\udf3a", "Cancel"]
+  cava:
+    type: "yasb.cava.CavaWidget"
+    options:
+      bar_height: 14
+      min_bar_height: 2
+      gradient: 1
+      reverse: 0
+      sensitivity: 150
+      foreground: "#89b4fa"
+      gradient_color_1: "#74c7ec"
+      gradient_color_2: "#89b4fa"
+      gradient_color_3: "#cba6f7"
+      bars_number: 10
+      bar_spacing: 1
+      bar_width: 3
+      sleep_timer: 5
+      hide_empty: false
+      noise_reduction: 50
+      monstercat: 0
+      waves: 0
+      callbacks:
+        on_left: "reload_cava"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "Notifications {data}" # {data} return number of unread notification
+      token: "env" # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      max_notification: 20 # Max number of notification displaying in menu max: 50
+      notification_dot:
+        enabled: true
+        corner: "bottom_right" # Can be "top_left", "top_right", "bottom_left", "bottom_right"
+        color: "#f38ba8" # Catppuccin pink
+        margin: [1, 1] # x and y margin for the dot
+      only_unread: false # Show only unread or all notifications;
+      max_field_size: 54 # Max characters in title before truncation.
+      update_interval: 300 # Check for new notification in seconds
+      tooltip: true
+      menu:
+        blur: true # Enable blur effect for the menu
+        round_corners: true # Enable round corners for the menu (this option is not supported on Windows 10)
+        round_corners_type: "normal" # Set the type of round corners for the menu (normal, small) (this option is not supported on Windows 10)
+        border_color: "System" # Set the border color for the menu (this option is not supported on Windows 10)
+        alignment: "right"
+        direction: "down"
+        distance: 6
+  todos:
+    type: "yasb.todo.TodoWidget"
+    options:
+      label: "\uf0ae {count}/{completed}"
+      label_alt: "\uf0ae Tasks: {count}"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      icons:
+        add: "\uf501 New Task"
+        edit: "Edit"
+        delete: "Delete"
+        date: "\ue641"
+        category: "\uf412"
+        checked: "\udb80\udd34"
+        unchecked: "\udb80\udd30"
+        sort: "\ueab4"
+        no_tasks: "\uf4a0"
+      categories:
+        default:
+          label: "General"
+        soon:
+          label: "Complete soon"
+        today:
+          label: "End of day"
+        urgent:
+          label: "Urgent"
+        important:
+          label: "Important"
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 2
+        offset: [1, 1]

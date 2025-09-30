@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.37/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 8,
+  "default_container_padding": 8,
+  "floating_window_aspect_ratio": "Ultrawide",
+  "workspace_rule": "Close",
+  "border": true,
+  "border_implementation": "Windows",
+  "border_style": "System",
+  "border_width": 2,
+  "border_offset": 0,
+  "transparency": true,
+  "transparency_alpha": 220,
+  "mouse_follows_focus": true,
+  "stackbar": {
+    "mode": "Never",
+    "height": 24,
+    "label": "Title",
+    "tabs": {
+      "width": 200,
+      "font_size": 16,
+      "font_family": "Segoe UI"
+    }
+  },
+  "animation": {
+    "enabled": true,
+    "duration": 200,
+    "fps": 60,
+    "style": {
+      "movement": "EaseOutBack",
+      "transparency": "Linear"
+    }
+  },
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "single_border": "Lavender",
+    "stack_border": "Green",
+    "floating_border": "Yellow",
+    "monocle_border": "Pink",
+    "unfocused_border": "Surface0",
+    "unfocused_locked_border": "Red",
+    "bar_accent": "Blue"
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        }
+      ]
+    }
+  ]
+}
