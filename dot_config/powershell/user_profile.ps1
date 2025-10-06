@@ -59,3 +59,12 @@ function git-clean-gone {
     }
 }
 
+# Re-activate Oh My Posh prompt after venv activation
+$env:VIRTUAL_ENV_DISABLE_PROMPT = 1;
+function ActivateVenv {
+    param([string]$Path = ".venv")
+
+    & "$Path\Scripts\Activate.ps1"
+    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\your-theme.omp.json" | Invoke-Expression
+}
+
