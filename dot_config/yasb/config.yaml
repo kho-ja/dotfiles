@@ -434,7 +434,7 @@ widgets:
         enabled: true
         blur: true
         image_width: 320
-        image_per_page: 8
+        image_per_page: 4
         show_buttons: true
         orientation: "portrait"
         image_spacing: 12
