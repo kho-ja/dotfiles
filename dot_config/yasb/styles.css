@@ -170,8 +170,8 @@
   color: var(--sky);
 }
 
-.weather-widget .icon.snowyIcyDay,
-.weather-widget .icon.snowyIcyNight {
+.weather-widget .icon.snowyDay,
+.weather-widget .icon.snowyNight {
   color: var(--text);
 }
 
