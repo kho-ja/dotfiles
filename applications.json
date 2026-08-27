@@ -2172,6 +2172,15 @@
       }
     ]
   },
+  "Rlogin": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "RLogin.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "RepoZ": {
     "ignore": [
       {

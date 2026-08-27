@@ -1,3 +1,4 @@
+Remove-Item alias:sl -Force -ErrorAction SilentlyContinue
 # Prompt
 Import-Module posh-git
 oh-my-posh init pwsh --config "~/.config/oh-my-posh/theme.omp.json"  | Invoke-Expression

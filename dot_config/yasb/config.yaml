@@ -1,5 +1,5 @@
-watch_stylesheet: false
-watch_config: false
+watch_stylesheet: true
+watch_config: true
 debug: false
 komorebi:
   start_command: "komorebic start --whkd"
@@ -426,7 +426,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "C:\\Users\\Abdulazizxoja\\Pictures\\Wallpapers"
+      image_path: "C:\\Users\\saidkhuja\\Pictures\\Wallpapers"
       change_automatically: false
       update_interval: 60
       tooltip: true
