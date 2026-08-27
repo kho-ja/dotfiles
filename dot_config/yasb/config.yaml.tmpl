@@ -426,7 +426,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "C:\\Users\\saidkhuja\\Pictures\\Wallpapers"
+      image_path: '{{ joinPath .chezmoi.homeDir "Pictures" "Wallpapers" }}'
       change_automatically: false
       update_interval: 60
       tooltip: true
