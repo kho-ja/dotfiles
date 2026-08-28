@@ -462,7 +462,7 @@
 .microphone-widget .icon {
   padding: 0 4px;
   font-size: 14px;
-  color: var(--red);
+  color: var(--teal);
 }
 
 .microphone-widget .icon.muted {
@@ -491,7 +491,7 @@
 }
 
 .microphone-slider::handle {
-  background: var(--red);
+  background: var(--teal);
   border: none;
   width: 16px;
   height: 16px;
@@ -500,11 +500,11 @@
 }
 
 .microphone-slider::handle:hover {
-  background: var(--maroon);
+  background: var(--sapphire);
 }
 
 .microphone-slider::sub-page {
-  background: var(--red);
+  background: var(--teal);
   border-radius: 2px;
 }
 
@@ -1518,4 +1518,23 @@
 .context-menu::item:checked {
   background-color: #0078d7;
   color: white;
+}
+/* MICROPHONE MENU - match volume menu for consistency */
+.microphone-menu {
+  background-color: var(--mantle);
+}
+.microphone-menu .microphone-container .device {
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  border-radius: 4px;
+  color: var(--text);
+}
+.microphone-menu .microphone-container .device.selected {
+  background-color: rgba(255, 255, 255, 0.085);
+}
+.microphone-menu .microphone-container .device:hover {
+  background-color: rgba(255, 255, 255, 0.06);
 }
