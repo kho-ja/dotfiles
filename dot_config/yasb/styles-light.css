@@ -282,7 +282,7 @@
   /* padding: 0 4px; */
   background: transparent;
   border-radius: 10%;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .taskbar-widget .app-icon:hover {
@@ -747,7 +747,7 @@
   border-radius: 6px;
   padding: 2px;
   margin: 0 1px;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .systray .button:hover {
@@ -767,7 +767,7 @@
   font-size: 12px;
   padding: 2px 4px;
   margin: 0 2px;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .systray .unpinned-visibility-btn:hover {
@@ -947,7 +947,7 @@
   font-family: "Segoe UI";
   margin: 2px 4px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .pomodoro-menu .button:hover {

@@ -10,6 +10,10 @@ bars:
     enabled: true
     screens: ["*"]
     class_name: "yasb-bar"
+    animation:
+      enabled: true
+      type: "fadeInOut"
+      duration: 250
     alignment:
       position: "top"
       center: true
@@ -195,7 +199,7 @@ widgets:
       animation:
         enabled: true
         type: "fadeInOut"
-        duration: 300
+        duration: 200
       media_menu:
         blur: true
         round_corners: true
@@ -238,7 +242,7 @@ widgets:
       animation:
         enabled: true
         type: "fadeInOut"
-        duration: 250
+        duration: 200
       label_shadow:
         enabled: true
         color: "rgba(0, 0, 0, 0.8)"
@@ -300,7 +304,7 @@ widgets:
       animation:
         enabled: true
         type: "fadeInOut"
-        duration: 250
+        duration: 200
       progress_bar:
         enabled: true
         position: "left"
@@ -447,7 +451,7 @@ widgets:
       animation:
         enabled: true
         type: "fadeInOut"
-        duration: 250
+        duration: 200
       label_shadow:
         enabled: true
         color: "black"
@@ -535,7 +539,7 @@ widgets:
       uptime: True
       blur: False
       blur_background: True
-      animation_duration: 250 # Milisecond
+      animation_duration: 200 # Milisecond
       button_row: 5 # Number of buttons in row, min 1 max 5
       buttons:
         signout: ["\udb80\udf43", "Sign out"]
