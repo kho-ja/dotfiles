@@ -1,114 +1,146 @@
 /*VARIABLES AND SOME DEFAULT SETTINGS*/
+
 :root {
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --peachedit: #ecd093;
-  --peachedit2: #e9bb77;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
-  --text: #cdd6f4;
-  --subtext1: #bac2de;
-  --subtext0: #a6adc8;
-  --overlay2: #9399b2;
-  --overlay1: #7f849c;
-  --overlay0: #6c7086;
-  --surface2: #585b70;
-  --surface1: #45475a;
-  --surface1: #282936;
-  --base: #1e1e2e;
-  --mantle: rgba(24, 24, 37, 0.5);
-  --crust: rgba(17, 17, 27, 0.5);
+
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --peachedit: #e64553;
+  --peachedit2: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #eff1f5;
+  --mantle: rgba(230, 233, 239, 0.7);
+  --crust: rgba(220, 224, 232, 0.7);
+
 }
 
 * {
+
   font-size: 12px;
-  color: #bec8e7;
+  color: #4c4f69;
   font-weight: 700;
   font-family: "JetBrainsMono NFP";
   margin: 0;
   padding: 0;
+
 }
 
 /*GENERAL CONFIGRATIONS*/
+
 .yasb-bar {
+
   padding: 0;
   margin: 0;
+
 }
 
 .widget {
+
   padding: 0 2px;
   margin: 0 2px;
   border-radius: 12px;
+
 }
 
 .widget .icon {
+
   font-size: 18px;
+
 }
 
 .widget .label {
+
   color: var(--text);
+
 }
 
 /*HOME WIDGET*/
+
 .home-widget {
+
   background-color: var(--surface1);
   padding-right: 7px;
   padding-left: 7px;
   padding-bottom: 1px;
+
 }
 
 /*HOME WIDGET DROPDOWN*/
+
 .home-menu {
+
   background-color: var(--mantle);
   border-radius: 8px;
   padding: 0;
   margin-left: 0px;
+
 }
 
 .home-menu .menu-item {
+
   padding: 6px 48px 7px 16px;
   font-size: 12px;
   font-family: "Segoe UI";
   font-weight: 700;
+
 }
 
 .home-menu .menu-item:hover {
-  background-color: rgba(128, 130, 158, 0.15);
-  color: #fff;
+
+  background-color: rgba(124, 127, 147, 0.12);
+  color: var(--text);
+
 }
 
 .home-menu .separator {
+
   max-height: 1px;
   background-color: rgba(128, 130, 158, 0.3);
+
 }
 
 /*KOMOREBI WORKSPACES WIDGET*/
+
 .komorebi-workspaces {
+
   background-color: var(--surface1);
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 6px;
   padding-left: 6px;
+
 }
 
 .komorebi-workspaces .offline-status {
+
   color: #627199;
   font-size: 12px;
   padding: 0 4px;
   font-weight: 700;
+
 }
 
 .komorebi-workspaces .ws-btn {
+
   border: none;
   background-color: var(--overlay2);
   margin: 0px 4px;
@@ -117,103 +149,145 @@
   border-radius: 5px;
   height: 10px;
   width: 10px;
+
 }
 
 .komorebi-workspaces .ws-btn.populated {
+
   background-color: var(--sky);
+
 }
 
 .komorebi-workspaces .ws-btn.active {
+
   color: rgba(149, 177, 255, 0);
   background-color: var(--teal);
   width: 36px;
   height: 10px;
   border-radius: 4px;
+
 }
 
 /*WEATHER WIDGET*/
+
 .weather-widget {
+
   background-color: var(--surface1);
   padding-right: 10px;
+
 }
 
 .weather-widget .icon {
+
   color: var(--yellow);
   padding: 6px;
+
 }
 
 .weather-widget .label {
+
   font-size: 14px;
+
 }
 
 .weather-widget .label.alt {
+
   font-size: 12px;
   color: var(--subtext1);
+
 }
 
 /* Individual weather condition icons */
+
 .weather-widget .icon.sunnyDay {
+
   color: var(--yellow);
+
 }
 
 .weather-widget .icon.clearNight {
+
   color: var(--lavender);
+
 }
 
 .weather-widget .icon.cloudyDay,
 .weather-widget .icon.cloudyNight {
+
   color: var(--overlay1);
+
 }
 
 .weather-widget .icon.rainyDay,
 .weather-widget .icon.rainyNight {
+
   color: var(--sky);
+
 }
 
 .weather-widget .icon.snowyDay,
 .weather-widget .icon.snowyNight {
+
   color: var(--text);
+
 }
 
 .weather-widget .icon.blizzardDay,
 .weather-widget .icon.blizzardNight {
+
   color: var(--subtext0);
+
 }
 
 .weather-widget .icon.foggyDay,
 .weather-widget .icon.foggyNight {
+
   color: var(--surface2);
+
 }
 
 .weather-widget .icon.thunderstormDay,
 .weather-widget .icon.thunderstormNight {
+
   color: var(--mauve);
+
 }
 
 .weather-widget .icon.default {
+
   color: var(--overlay2);
+
 }
 
 .weather-card {
-  background-color: rgba(17, 17, 27, 0.5);
+
+  background-color: var(--mantle);
+
 }
 
 .weather-card-today {
-  border: 1px solid #282936;
+
+  border: 1px solid var(--surface0);
   border-radius: 8px;
-  background-color: rgba(17, 17, 27, 0.2);
+  background-color: var(--crust);
+
 }
 
 .weather-card-today .label {
+
   font-size: 12px;
+
 }
 
 .weather-card-today .label.location {
+
   font-size: 24px;
   font-weight: 700;
+
 }
 
 .weather-card-today .label.alert {
+
   font-size: 12px;
   font-weight: 700;
   background-color: rgba(247, 199, 42, 0.05);
@@ -221,35 +295,47 @@
   color: rgba(196, 181, 162, 0.85);
   border-radius: 6px;
   padding: 5px 0;
+
 }
 
 .weather-card-day {
-  border: 1px solid #45475a;
+
+  border: 1px solid var(--surface1);
   border-radius: 8px;
-  background-color: rgba(17, 17, 27, 0.2);
+  background-color: var(--crust);
+
 }
 
 .weather-card-day.active {
-  background-color: rgba(40, 40, 60, 0.6);
-  border: 1px solid rgba(50, 50, 75, 1);
+
+  background-color: var(--surface0);
+  border: 1px solid var(--surface1);
+
 }
 
 .weather-card-day:hover {
-  background-color: rgba(40, 40, 60, 0.6);
+
+  background-color: var(--surface0);
+
 }
 
 .weather-card-day .label {
+
   font-size: 12px;
+
 }
 
 .weather-card .hourly-container {
-  border: 1px solid #282936;
+
+  border: 1px solid var(--surface0);
   background-color: #3c5fa0;
   border-radius: 8px;
   min-height: 150px;
+
 }
 
 .weather-card .hourly-data {
+
   /* font-family: 'Segoe UI';*/
   /* color: cyan;*/
   /* <- Font color */
@@ -257,129 +343,180 @@
   /* <- Curve color */
   font-size: 12px;
   font-weight: bold;
+
 }
 
 /*ACTIVE WINDOW WIDGET*/
+
 .active-window-widget {
+
   background-color: var(--surface1);
+
 }
 
 .active-window-widget .label {
+
   font-size: 14px;
+
 }
 
 .active-window-widget .icon {
+
   padding-right: 6px;
   border: none;
+
 }
 
 /*TASKBAR WIDGET*/
+
 .taskbar-widget {
+
   background-color: var(--surface1);
+
 }
 
 .taskbar-widget .app-icon {
+
   /* padding: 0 4px; */
   background: transparent;
   border-radius: 10%;
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 .taskbar-widget .app-icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+
+  background-color: rgba(76, 79, 105, 0.08);
+
 }
 
 .taskbar-widget .app-icon.foreground {
+
   background-color: var(--surface2);
   border: 1px solid var(--overlay0);
+
 }
 
 .taskbar-widget .app-icon.foreground:hover {
+
   background-color: var(--overlay1);
+
 }
 
 /* If title_label is enabled: */
+
 .taskbar-widget .app-title {
+
   font-size: 12px;
   color: var(--text);
   padding: 0 4px;
+
 }
 
 .taskbar-widget .app-title.foreground {
+
   color: var(--text);
   font-weight: 700;
+
 }
 
 /*CLOCK - CALENDAR WIDGET*/
+
 .clock-widget {
+
   background-color: var(--surface1);
   padding-left: 10px;
   padding-right: 10px;
+
 }
 
 .clock-widget .label {
+
   font-size: 14px;
+
 }
 
 /*CLOCK - CALENDAR WIDGET DROPDOWN*/
+
 .calendar {
+
   background-color: var(--mantle);
+
 }
 
 .calendar .calendar-table,
 .calendar .calendar-table::item {
+
   background-color: rgba(17, 17, 27, 0);
-  color: rgba(162, 177, 196, 0.85);
+  color: var(--subtext1);
   font-family: "Segoe UI";
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
+
 }
 
 .calendar .calendar-table::item:selected {
-  color: rgb(255, 255, 255);
+
+  color: var(--text);
+
 }
 
 .calendar .day-label {
+
   margin-top: 20px;
+
 }
 
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
+
   font-family: "Segoe UI";
   font-size: 16px;
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   min-width: 180px;
   max-width: 180px;
+
 }
 
 .calendar .month-label {
+
   font-weight: normal;
+
 }
 
 .calendar .date-label {
+
   font-size: 88px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
+  color: var(--text);
   margin-top: -20px;
+
 }
 
 /*DISK WIDGET*/
+
 .disk-widget {
+
   padding-right: 7px;
   padding-left: 7px;
   background-color: var(--surface1);
+
 }
 
 /*DISK DROPDOWN*/
+
 .disk-group {
+
   background-color: var(--mantle);
+
 }
 
 .disk-group-row {
+
   min-width: 220px;
   max-width: 220px;
   max-height: 40px;
@@ -387,56 +524,78 @@
   padding: 0;
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0);
+
 }
 
 .disk-group-row:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background-color: rgba(76, 79, 105, 0.05);
+  border: 1px solid rgba(76, 79, 105, 0.12);
+
 }
 
 .disk-group-label-bar {
+
   max-height: 8px;
   border: 0px solid rgba(128, 128, 128, 0);
   background-color: rgba(148, 226, 213, 0.3);
   border-radius: 4px;
+
 }
 
 .disk-group-label-bar::chunk {
+
   background-color: rgba(148, 226, 213, 1);
   border-radius: 4px;
+
 }
 
 .disk-group-label {
+
   font-size: 13px;
+
 }
 
 .disk-group-label-size {
+
   font-size: 12px;
   color: rgba(205, 214, 244, 0.5);
+
 }
 
 /*AUDIO WIDGET*/
+
 .volume-widget {
+
   padding-right: 9px;
   padding-left: 5px;
   background-color: var(--surface1);
+
 }
 
 .volume-widget .icon {
+
   padding: 0 6px;
   color: var(--teal);
+
 }
 
 .volume-widget .label {
+
   font-size: 14px;
+
 }
 
 /*AUDIO DROPDOWN*/
+
 .audio-menu {
+
   background-color: var(--mantle);
+
 }
 
 .audio-container .device {
+
   font-size: 20px;
   background-color: transparent;
   border: none;
@@ -444,89 +603,124 @@
   margin: 2px 0;
   font-size: 12px;
   border-radius: 4px;
+
 }
 
 .audio-container .device.selected {
-  background-color: rgba(255, 255, 255, 0.085);
+
+  background-color: rgba(76, 79, 105, 0.08);
+
 }
 
 .audio-container .device:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+
+  background-color: rgba(76, 79, 105, 0.06);
+
 }
 
 /*MICROPHONE WIDGET*/
+
 .microphone-widget {
+
   background-color: var(--surface1);
+
 }
 
 .microphone-widget .icon {
+
   padding: 0 4px;
   font-size: 14px;
   color: var(--teal);
+
 }
 
 .microphone-widget .icon.muted {
+
   color: var(--overlay1);
+
 }
 
 .microphone-widget .label {
+
   font-size: 12px;
   color: var(--text);
+
 }
 
 .microphone-widget .label.muted {
+
   color: var(--overlay1);
+
 }
 
 /* Microphone Menu Styles */
+
 .microphone-slider {
+
   border: none;
   background: transparent;
+
 }
 
 .microphone-slider::groove {
+
   background: var(--surface1);
   height: 4px;
   border-radius: 2px;
+
 }
 
 .microphone-slider::handle {
+
   background: var(--teal);
   border: none;
   width: 16px;
   height: 16px;
   border-radius: 8px;
   margin: -6px 0;
+
 }
 
 .microphone-slider::handle:hover {
+
   background: var(--sapphire);
+
 }
 
 .microphone-slider::sub-page {
+
   background: var(--teal);
   border-radius: 2px;
+
 }
 
 /*MEDIA WIDGET*/
+
 .media-widget {
+
   padding: 0;
   padding-right: 10px;
   background-color: var(--surface1);
+
 }
 
 .media-widget .label {
+
   font-size: 14px;
   padding: 0 0px;
   margin-left: 6px;
+
 }
 
 .media-widget .label.alt {
+
   font-size: 12px;
   color: var(--subtext1);
+
 }
 
 .media-widget .btn {
+
   color: var(--lavender);
   padding: 0 4px;
   margin: 0;
@@ -535,93 +729,124 @@
   background: transparent;
   border: none;
   cursor: pointer;
+
 }
 
 .media-widget .btn:hover {
+
   color: var(--text);
+
 }
 
 .media-widget .btn.play {
+
   color: var(--green);
   font-size: 16px;
+
 }
 
 .media-widget .btn.play:hover {
+
   color: var(--teal);
+
 }
 
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
+
   color: var(--overlay0);
   background-color: transparent;
+
 }
 
 .media-widget .icon {
+
   padding: 0 6px;
+
 }
 
 /* Media Menu Popup Styles */
+
 .media-menu {
+
   min-width: 420px;
   max-width: 420px;
   background-color: var(--mantle);
   border: 1px solid var(--surface1);
   border-radius: 12px;
   padding: 12px;
+
 }
 
 .media-menu .title,
 .media-menu .artist,
 .media-menu .source {
+
   font-size: 14px;
   font-weight: 700;
   margin-left: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
+
 }
 
 .media-menu .artist {
+
   font-size: 13px;
   color: var(--subtext1);
   margin-top: 0px;
   margin-bottom: 8px;
+
 }
 
 .media-menu .source {
+
   font-size: 11px;
   color: var(--base);
   font-weight: normal;
   border-radius: 3px;
   background-color: var(--subtext0);
   padding: 2px 4px;
+
 }
 
 .media-menu .source.spotify {
+
   background-color: var(--green);
   color: var(--base);
+
 }
 
 .media-menu .source.firefox {
+
   background-color: var(--red);
   color: var(--text);
+
 }
 
 .media-menu .source.edge {
+
   background-color: var(--blue);
   color: var(--text);
+
 }
 
 .media-menu .source.chrome {
+
   background-color: var(--yellow);
   color: var(--base);
+
 }
 
 .media-menu .source.windows-media {
+
   background-color: var(--sapphire);
   color: var(--text);
+
 }
 
 .media-menu .btn {
+
   font-family: "Segoe Fluent Icons";
   font-size: 14px;
   font-weight: 400;
@@ -635,131 +860,173 @@
   border: 1px solid var(--surface2);
   color: var(--text);
   cursor: pointer;
+
 }
 
 .media-menu .btn.prev {
+
   margin-left: 10px;
+
 }
 
 .media-menu .btn:hover {
+
   color: var(--text);
   background-color: var(--surface1);
   border-color: var(--surface1);
+
 }
 
 .media-menu .btn.play {
+
   background-color: var(--green);
   border-color: var(--green);
   color: var(--base);
   font-size: 20px;
+
 }
 
 .media-menu .btn.play:hover {
+
   background-color: var(--teal);
   border-color: var(--teal);
+
 }
 
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
+
   color: var(--overlay0);
   background-color: transparent;
   border-color: var(--surface0);
   cursor: not-allowed;
+
 }
 
 .media-menu .playback-time {
+
   font-size: 13px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--subtext1);
   margin-top: 20px;
   min-width: 100px;
+
 }
 
 .media-menu .progress-slider {
+
   height: 10px;
   margin: 5px 4px;
   border-radius: 3px;
+
 }
 
 .media-menu .progress-slider::groove {
+
   background: transparent;
   height: 2px;
   border-radius: 3px;
   background: var(--surface1);
+
 }
 
 .media-menu .progress-slider::groove:hover {
+
   background: transparent;
   height: 6px;
   border-radius: 3px;
   background: var(--surface2);
+
 }
 
 .media-menu .progress-slider::sub-page {
+
   background: var(--teal);
   border-radius: 3px;
   height: 4px;
+
 }
 
 /*WALLPAPERS WIDGET*/
+
 .wallpapers-widget {
+
   padding-right: 7px;
   padding-left: 7px;
   background-color: var(--surface1);
+
 }
 
 /*SYSTRAY WIDGET*/
+
 .systray {
+
   background-color: var(--surface1);
   padding: 0 4px;
   margin: 0;
   border-radius: 12px;
+
 }
 
 .systray .widget-container {
+
   background: transparent;
   padding: 0;
+
 }
 
 .systray .unpinned-container {
+
   background-color: var(--surface2);
   border: 1px solid var(--overlay0);
   border-radius: 8px;
   padding: 2px;
   margin-right: 4px;
+
 }
 
 .systray .pinned-container {
+
   background: transparent;
   padding: 0;
+
 }
 
 .systray .pinned-container[forceshow="true"] {
+
   background-color: var(--surface2);
   border: 1px solid var(--blue);
   border-radius: 8px;
   padding: 2px;
+
 }
 
 .systray .button {
+
   background: transparent;
   border: none;
   border-radius: 6px;
   padding: 2px;
   margin: 0 1px;
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 .systray .button:hover {
+
   background-color: var(--overlay1);
+
 }
 
 .systray .button[dragging="true"] {
+
   background-color: var(--peach);
   border: 1px solid var(--yellow);
+
 }
 
 .systray .unpinned-visibility-btn {
+
   background: transparent;
   border: none;
   border-radius: 6px;
@@ -768,175 +1035,236 @@
   padding: 2px 4px;
   margin: 0 2px;
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 .systray .unpinned-visibility-btn:hover {
+
   background-color: var(--overlay1);
   color: var(--text);
+
 }
 
 .systray .unpinned-visibility-btn:checked {
+
   background-color: var(--surface2);
   color: var(--blue);
+
 }
 
 /*WALLPAPERS GALLERY*/
+
 .wallpapers-gallery-window {
+
   background-color: var(--mantle);
   border: 0;
   margin: 0;
+
 }
 
 .wallpapers-gallery-buttons {
+
   font-size: 12px;
   font-family: "Bahnschrift";
   background-color: rgba(255, 255, 255, 0);
-  color: white;
+  color: var(--text);
   border: none;
   font-size: 14px;
   padding: 8px 0;
   border-radius: 8px;
   margin: 0 8px 8px 8px;
   width: 600px;
+
 }
 
 .wallpapers-gallery-buttons:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+
+  background-color: rgba(76, 79, 105, 0.08);
+
 }
 
 .wallpapers-gallery-image {
+
   border: 4px solid transparent;
   border-radius: 10px;
+
 }
 
 .wallpapers-gallery-image:hover {
+
   border: 4px solid rgb(66, 68, 83);
+
 }
 
 .wallpapers-gallery-image.focused {
+
   border: 4px solid #89b4fa;
+
 }
 
 /*POWER WIDGET*/
+
 .power-menu-widget {
+
   padding-right: 7px;
   padding-left: 7px;
   background-color: var(--surface1);
+
 }
 
 .power-menu-widget .label {
+
   color: var(--red);
   font-size: 16px;
+
 }
 
 /*POWER MENU POPUP*/
+
 .uptime {
+
   font-size: 14px;
   margin-bottom: 10px;
-  color: rgba(191, 202, 219, 0.726);
+  color: var(--subtext1);
   font-weight: 700;
   font-family: "Bahnschrift";
+
 }
 
 .power-menu-popup .button {
+
   padding: 0;
   width: 160px;
   height: 240px;
   border-radius: 4px;
-  background-color: rgba(41, 42, 58, 0.75);
+  background-color: var(--surface0);
   font-family: "Bahnschrift";
-  color: white;
+  color: var(--text);
   border: 4px solid rgba(255, 255, 255, 0);
+
 }
 
 .power-menu-popup .button.hover {
-  background-color: rgb(55, 56, 75);
-  border: 4px solid rgb(55, 56, 75);
+
+  background-color: var(--surface1);
+  border: 4px solid var(--surface1);
+
 }
 
 .power-menu-popup .button .label {
+
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--subtext0);
   font-family: "Bahnschrift";
+
 }
 
 .power-menu-popup .button .icon {
+
   font-size: 64px;
   padding-top: 54px;
-  color: rgba(255, 255, 255, 0.25);
+  color: var(--overlay1);
+
 }
 
 .power-menu-popup .button.cancel .icon {
-  color: rgba(243, 139, 168, 0.55);
+
+  color: var(--red);
+
 }
 
 .power-menu-popup .button.cancel .label {
-  color: rgba(243, 139, 168, 0.95);
+
+  color: var(--red);
+
 }
 
 .cava-widget {
+
   padding: 0;
   padding-left: 10px;
   padding-right: 10px;
   background-color: var(--surface1);
+
 }
 
 /*POMODORO WIDGET*/
+
 .pomodoro-widget {
+
   background-color: var(--surface1);
+
 }
 
 .pomodoro-widget .icon {
+
   font-size: 12px;
   padding: 0 4px;
+
 }
 
 .pomodoro-widget .label {
+
   color: var(--text);
+
 }
 
 .pomodoro-widget .label.work,
 .pomodoro-widget .icon.work {
+
   color: var(--green);
+
 }
 
 .pomodoro-widget .label.break,
 .pomodoro-widget .icon.break {
+
   color: var(--blue);
+
 }
 
 .pomodoro-widget .label.paused,
 .pomodoro-widget .icon.paused {
+
   color: var(--overlay1);
+
 }
 
 /* Pomodoro Menu Styles */
+
 .pomodoro-menu .header {
+
   font-size: 16px;
   font-weight: 700;
   color: var(--text);
   font-family: "Segoe UI";
   margin-bottom: 8px;
+
 }
 
 .pomodoro-menu .status {
+
   font-size: 18px;
   font-weight: 700;
   color: var(--text);
   font-family: "Segoe UI";
   margin-bottom: 4px;
+
 }
 
 .pomodoro-menu .session {
+
   font-size: 12px;
   color: var(--subtext1);
   font-family: "Segoe UI";
   margin-bottom: 12px;
+
 }
 
 .pomodoro-menu .button {
+
   background-color: var(--surface2);
   color: var(--text);
   border: none;
@@ -948,212 +1276,290 @@
   margin: 2px 4px;
   cursor: pointer;
   transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 .pomodoro-menu .button:hover {
+
   background-color: var(--overlay1);
   transform: translateY(-1px);
+
 }
 
 .pomodoro-menu .button:pressed {
+
   background-color: var(--overlay0);
   transform: translateY(0);
+
 }
 
 .pomodoro-menu .button.start {
+
   background-color: var(--green);
   color: var(--base);
+
 }
 
 .pomodoro-menu .button.start:hover {
+
   background-color: var(--teal);
+
 }
 
 .pomodoro-menu .button.pause {
+
   background-color: var(--peach);
   color: var(--base);
+
 }
 
 .pomodoro-menu .button.pause:hover {
+
   background-color: var(--yellow);
+
 }
 
 .pomodoro-menu .button.reset {
+
   background-color: var(--red);
   color: var(--base);
+
 }
 
 .pomodoro-menu .button.reset:hover {
+
   background-color: var(--maroon);
+
 }
 
 /*GITHUB DROPDOWN*/
+
 .github-widget {
+
   padding-right: 7px;
   padding-left: 7px;
   background-color: var(--surface1);
+
 }
 
 .github-widget .icon {
+
   font-size: 16px;
+
 }
 
 .github-menu {
-  background-color: rgba(17, 17, 27, 0.2);
+
+  background-color: var(--crust);
   max-height: 500px;
   min-height: 500px;
   min-width: 420px;
+
 }
 
 .github-menu .header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid var(--surface1);
   font-size: 15px;
   font-weight: 400;
   font-family: "Segoe UI";
   padding: 8px;
-  color: white;
-  background-color: rgba(17, 17, 27, 0.75);
+  color: var(--text);
+  background-color: var(--mantle);
+
 }
 
 .github-menu .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-top: 1px solid var(--surface1);
   font-size: 12px;
   padding: 4px 8px 6px 8px;
   font-family: "Segoe UI";
-  color: #9399b2;
-  background-color: rgba(17, 17, 27, 0.75);
+  color: var(--overlay2);
+  background-color: var(--mantle);
+
 }
 
 .github-menu .contents {
-  background-color: rgba(17, 17, 27, 0.2);
+
+  background-color: var(--crust);
+
 }
 
 .github-menu .contents .item {
+
   min-height: 40px;
   padding: 6px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  border-bottom: 1px solid var(--surface1);
+
 }
 
 .github-menu .contents .item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+
+  background-color: rgba(76, 79, 105, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
+
 }
 
 .github-menu .contents .item .title,
 .github-menu .contents .item .description {
-  color: #9399b2;
+
+  color: var(--overlay2);
   font-family: Segoe UI;
+
 }
 
 .github-menu .contents .item .title {
+
   font-size: 14px;
   font-weight: 700;
+
 }
 
 .github-menu .contents .item .description {
+
   font-size: 12px;
   font-weight: 500;
+
 }
 
 .github-menu .contents .item.new .title,
 .github-menu .contents .item.new .description {
-  color: #ffffff;
+
+  color: var(--text);
+
 }
 
 .github-menu .contents .item .icon {
+
   font-size: 16px;
   padding-right: 0;
   padding-left: 8px;
   padding-right: 4px;
-  color: #9399b2;
+  color: var(--overlay2);
+
 }
 
 .github-menu .contents .item.new .icon {
+
   color: #3fb950;
+
 }
 
 /* Todo Widget Styles */
+
 .todo-widget {
+
   background-color: var(--surface1);
   padding: 0 6px 0 6px;
+
 }
 
 .todo-widget .icon {
+
   color: #00f8d7;
   padding: 0;
+
 }
 
 .todo-widget .label {
+
   font-size: 12px;
   padding: 0;
+
 }
 
 /* Todo Widget Styles */
+
 .todo-widget {
+
   padding: 0 6px 0 6px;
+
 }
 
 .todo-widget .icon {
+
   color: #00f8d7;
   padding: 0;
+
 }
 
 .todo-widget .label {
+
   font-size: 12px;
   padding: 0;
+
 }
 
 /* Todo Menu Styles */
+
 .todo-menu {
-  background-color: rgba(24, 25, 27, 0.8);
+
+  background-color: var(--mantle);
   min-width: 400px;
   max-width: 400px;
   min-height: 500px;
   max-height: 500px;
+
 }
 
 .todo-menu .header {
+
   margin: 16px 10px;
+
 }
 
 .todo-menu .header .add-task-button,
 .todo-menu .header .tab-buttons {
+
   border: none;
   border-radius: 13px;
-  color: #ffffff;
+  color: var(--text);
   padding: 4px 8px;
   font-size: 14px;
   font-weight: 700;
   margin: 0px;
   font-family: "Segoe UI", "JetBrainsMono NFP";
+
 }
 
 .todo-menu .header .tab-buttons {
+
   margin: 0;
   font-size: 12px;
   background-color: red;
+
 }
 
 .todo-menu .header .add-task-button:hover {
+
   background-color: #0f91e7;
+
 }
 
 .todo-menu .header .tab-buttons.in-progress,
 .todo-menu .header .tab-buttons.completed {
+
   background-color: transparent;
+
 }
 
 .todo-menu .header .tab-buttons.in-progress:checked {
+
   color: #7fffd4;
+
 }
 
 .todo-menu .header .tab-buttons.completed:checked {
+
   color: #ff583b;
+
 }
 
 .todo-menu .header .tab-buttons.sort {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+
+  background-color: rgba(76, 79, 105, 0.08);
+  color: var(--text);
   border-radius: 10px;
   min-height: 20px;
   min-width: 20px;
@@ -1162,137 +1568,179 @@
   padding: 0;
   margin: 0 8px 0 0;
   font-family: "JetBrainsMono NFP";
+
 }
 
 .todo-menu .header .tab-buttons.sort:pressed {
+
   background-color: rgba(255, 255, 255, 0.2);
+
 }
 
 .todo-menu .header .tab-buttons.filter {
+
   color: red;
   background-color: red;
+
 }
 
 .todo-menu .no-tasks {
+
   font-family: "Segoe UI";
   font-size: 18px;
-  color: #979fa0;
+  color: var(--overlay1);
   font-weight: 400;
   margin-top: 16px;
+
 }
 
 .todo-menu .no-tasks-icon {
+
   font-size: 80px;
-  color: #979fa0;
+  color: var(--overlay1);
   font-family: "JetBrainsMono NFP";
   margin-top: 64px;
   font-weight: 400;
+
 }
 
 /* Task item styles */
+
 .todo-menu .task-item {
-  background-color: rgba(0, 0, 0, 0.1);
+
+  background-color: rgba(76, 79, 105, 0.05);
   border-radius: 8px;
   margin: 0px 12px 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(76, 79, 105, 0.12);
   padding: 8px 0;
+
 }
 
 .todo-menu .task-item.expanded {
-  background-color: rgba(211, 214, 219, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background-color: var(--surface0);
+  border: 1px solid var(--surface1);
+
 }
 
 .todo-menu .task-item.drop-highlight,
 .todo-menu .task-item.drop-highlight:hover,
 .todo-menu .task-item.drop-highlight:focus {
-  background-color: rgba(0, 120, 212, 0.26);
+
+  background-color: rgba(30, 102, 245, 0.15);
   border: 1px solid #007acc;
+
 }
 
 .todo-menu .task-item .title {
-  color: #ebebeb;
+
+  color: var(--text);
   font-size: 13px;
   font-weight: 700;
   font-family: "Segoe UI";
   padding: 0 8px 8px 8px;
   margin-top: 6px;
+
 }
 
 .todo-menu .task-item.completed .title,
 .todo-menu .task-item.completed .description {
+
   text-decoration: line-through;
-  color: #7f8c8d;
+  color: var(--overlay1);
+
 }
 
 .todo-menu .task-item .description {
-  color: #bdc3c7;
+
+  color: var(--subtext1);
   font-size: 12px;
   font-weight: 700;
   padding: 0 8px 8px 8px;
   font-family: "Segoe UI";
+
 }
 
 .todo-menu .task-checkbox {
+
   background-color: transparent;
   border: none;
   margin-left: 12px;
   margin-top: 5px;
   font-size: 18px;
-  color: #ebebeb;
+  color: var(--text);
   font-family: "JetBrainsMono NFP";
+
 }
 
 .todo-menu .task-checkbox:checked {
-  color: #7f8c8d;
+
+  color: var(--overlay1);
+
 }
 
 /* Task info row styles */
+
 .todo-menu .task-info-row {
+
   margin-left: 8px;
   margin-bottom: 8px;
+
 }
 
 .todo-menu .task-info-row .date-text,
 .todo-menu .task-info-row .category-text {
+
   font-family: "Segoe UI";
   font-weight: 700;
   color: #7e7f88;
   font-size: 13px;
   padding-left: 0px;
   margin-right: 12px;
+
 }
 
 .todo-menu .task-info-row .date-icon,
 .todo-menu .task-info-row .category-icon {
+
   font-weight: 400;
   color: #a7a8b3;
   font-size: 14px;
   font-family: "JetBrainsMono NFP";
   margin-top: 1px;
+
 }
 
 .todo-menu .task-info-row .category-text.important,
 .todo-menu .task-info-row .category-icon.important {
+
   color: #ff2600;
+
 }
 
 .todo-menu .task-info-row .category-text.urgent,
 .todo-menu .task-info-row .category-icon.urgent {
+
   color: #ff583b;
+
 }
 
 .todo-menu .task-info-row .category-text.soon,
 .todo-menu .task-info-row .category-icon.soon {
+
   color: #7fffd4;
+
 }
 
 .todo-menu .task-info-row .category-text.today,
 .todo-menu .task-info-row .category-icon.today {
+
   color: #f9e2af;
+
 }
 
 .todo-menu .task-info-row .delete-task-button {
+
   background-color: rgb(165, 70, 38);
   color: #000000;
   font-family: "Segoe UI";
@@ -1303,9 +1751,11 @@
   min-height: 20px;
   max-height: 20px;
   margin-right: 8px;
+
 }
 
 .todo-menu .task-info-row .edit-task-button {
+
   background-color: rgb(160, 160, 160);
   color: #000000;
   font-family: "Segoe UI";
@@ -1316,25 +1766,1976 @@
   min-height: 20px;
   max-height: 20px;
   margin-right: 8px;
+
 }
 
 /* App dialog style */
+
 .todo-menu .app-dialog {
+
   font-family: "Segoe UI";
-  background-color: #202020;
+  background-color: var(--mantle);
+
 }
 
 .todo-menu .app-dialog .buttons-container {
+
+  background-color: var(--crust);
+  margin-top: 16px;
+  border-top: 1px solid var(--surface1);
+  max-height: 80px;
+  min-height: 80px;
+  padding: 0 20px 0 20px;
+
+}
+
+.todo-menu .app-dialog .title-field,
+.todo-menu .app-dialog .desc-field {
+
+  background-color: var(--base);
+  border: 1px solid var(--surface1);
+  border-radius: 4px;
+  padding: 0 6px;
+  font-family: "Segoe UI";
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 10px 0px 5px 0;
+  min-height: 30px;
+
+}
+
+.todo-menu .app-dialog .desc-field {
+
+  max-height: 60px;
+
+}
+
+.todo-menu .app-dialog .title-field:focus,
+.todo-menu .app-dialog .desc-field:focus {
+
+  border-bottom-color: #4cc2ff;
+
+}
+
+.todo-menu .app-dialog .button {
+
+  background-color: var(--surface0);
+  border: none;
+  border-radius: 4px;
+  font-family: "Segoe UI";
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 80px;
+  padding: 0 6px;
+  margin: 10px 0 5px 6px;
+  min-height: 28px;
+  outline: none;
+
+}
+
+.todo-menu .app-dialog .buttons-container .button {
+
+  margin: 10px 0 5px 0px;
+  font-size: 13px;
+
+}
+
+.todo-menu .app-dialog .button:focus {
+
+  border: 2px solid #adadad;
+
+}
+
+.todo-menu .app-dialog .button:focus,
+.todo-menu .app-dialog .button:hover {
+
+  background-color: var(--surface1);
+
+}
+
+.todo-menu .app-dialog .button:pressed {
+
+  background-color: var(--surface1);
+
+}
+
+.todo-menu .app-dialog .button.add {
+
+  background-color: var(--blue);
+
+}
+
+.todo-menu .app-dialog .button.add:focus,
+.todo-menu .app-dialog .button.add:hover {
+
+  background-color: var(--sapphire);
+
+}
+
+.todo-menu .app-dialog .button.add:pressed {
+
+  background-color: var(--blue);
+
+}
+
+.todo-menu .app-dialog .warning-message {
+
+  background-color: rgba(210, 15, 57, 0.08);
+  border: 1px solid rgba(210, 15, 57, 0.2);
+  border-radius: 4px;
+  color: var(--red);
+  font-family: "Segoe UI";
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  margin: 4px 0px;
+
+}
+
+.todo-menu .app-dialog .category-button {
+
+  background-color: var(--surface0);
+  border: none;
+  border-radius: 4px;
+  font-family: "Segoe UI";
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--subtext0);
+  padding: 0 6px;
+  margin-top: 8px;
+  min-height: 24px;
+  outline: none;
+
+}
+
+.todo-menu .app-dialog .category-button:checked {
+
+  background-color: var(--surface2);
+  color: var(--text);
+
+}
+
+/* Global context menu style */
+
+.context-menu,
+.context-menu .menu-checkbox {
+
+  background-color: var(--mantle);
+  border: none;
+  padding: 4px 0px;
+  font-family: "Segoe UI";
+  font-size: 12px;
+  color: var(--text);
+
+}
+
+.context-menu::right-arrow {
+
+  width: 8px;
+  height: 8px;
+  padding-right: 24px;
+
+}
+
+.context-menu::item,
+.context-menu .menu-checkbox {
+
+  background-color: transparent;
+  padding: 6px 12px;
+  margin: 2px 6px;
+  border-radius: 6px;
+  min-width: 100px;
+
+}
+
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+
+  background-color: var(--surface1);
+  color: var(--text);
+
+}
+
+.context-menu::separator {
+
+  height: 1px;
+  background-color: var(--surface1);
+  margin: 4px 8px;
+
+}
+
+.context-menu::item:disabled {
+
+  color: var(--overlay0);
+  background-color: transparent;
+
+}
+
+.context-menu .menu-checkbox .checkbox {
+
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  margin: 0;
+  color: var(--text);
+  font-family: "Segoe UI";
+
+}
+
+.context-menu .submenu::item:disabled {
+
+  margin: 0;
+  padding-left: 16px;
+
+}
+
+.context-menu .menu-checkbox .checkbox:unchecked {
+
+  color: var(--overlay1);
+
+}
+
+.context-menu .menu-checkbox .checkbox::indicator {
+
+  width: 12px;
+  height: 12px;
+  margin-left: 0px;
+  margin-right: 8px;
+
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+
+  background: #444444;
+  border-radius: 2px;
+
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+
+  background: #007acc;
+  border-radius: 2px;
+
+}
+
+.context-menu .menu-checkbox .checkbox:focus {
+
+  outline: none;
+
+}
+
+.context-menu::item:checked {
+
+  background-color: #0078d7;
+  color: var(--text);
+
+}
+
+/* MICROPHONE MENU - match volume menu for consistency */
+
+.microphone-menu {
+
+  background-color: var(--mantle);
+
+}
+
+.microphone-menu .microphone-container .device {
+
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  border-radius: 4px;
+  color: var(--text);
+
+}
+
+.microphone-menu .microphone-container .device.selected {
+
+  background-color: rgba(76, 79, 105, 0.08);
+
+}
+
+.microphone-menu .microphone-container .device:hover {
+
+  background-color: rgba(76, 79, 105, 0.06);
+
+}
+
+
+/* ============================================================
+   DARK THEME (native .dark OS-following) — auto-generated
+   YASB adds class .dark to the root element when Windows uses dark mode.
+   CSS variables cannot be re-scoped per-class in the YASB engine, so dark
+   values are resolved to literals and applied via .dark-scoped overrides.
+   ============================================================ */
+
+.dark * {
+
+  font-size: 12px;
+  color: #bec8e7;
+  font-weight: 700;
+  font-family: "JetBrainsMono NFP";
+  margin: 0;
+  padding: 0;
+
+}
+
+.dark .yasb-bar {
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.dark .widget {
+
+  padding: 0 2px;
+  margin: 0 2px;
+  border-radius: 12px;
+
+}
+
+.dark .widget .icon {
+
+  font-size: 18px;
+
+}
+
+.dark .widget .label {
+
+  color: #cdd6f4;
+
+}
+
+.dark .home-widget {
+
+  background-color: #282936;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 1px;
+
+}
+
+.dark .home-menu {
+
+  background-color: rgba(24, 24, 37, 0.5);
+  border-radius: 8px;
+  padding: 0;
+  margin-left: 0px;
+
+}
+
+.dark .home-menu .menu-item {
+
+  padding: 6px 48px 7px 16px;
+  font-size: 12px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+
+}
+
+.dark .home-menu .menu-item:hover {
+
+  background-color: rgba(128, 130, 158, 0.15);
+  color: #fff;
+
+}
+
+.dark .home-menu .separator {
+
+  max-height: 1px;
+  background-color: rgba(128, 130, 158, 0.3);
+
+}
+
+.dark .komorebi-workspaces {
+
+  background-color: #282936;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 6px;
+  padding-left: 6px;
+
+}
+
+.dark .komorebi-workspaces .offline-status {
+
+  color: #627199;
+  font-size: 12px;
+  padding: 0 4px;
+  font-weight: 700;
+
+}
+
+.dark .komorebi-workspaces .ws-btn {
+
+  border: none;
+  background-color: #9399b2;
+  margin: 0px 4px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+
+}
+
+.dark .komorebi-workspaces .ws-btn.populated {
+
+  background-color: #89dceb;
+
+}
+
+.dark .komorebi-workspaces .ws-btn.active {
+
+  color: rgba(149, 177, 255, 0);
+  background-color: #94e2d5;
+  width: 36px;
+  height: 10px;
+  border-radius: 4px;
+
+}
+
+.dark .weather-widget {
+
+  background-color: #282936;
+  padding-right: 10px;
+
+}
+
+.dark .weather-widget .icon {
+
+  color: #f9e2af;
+  padding: 6px;
+
+}
+
+.dark .weather-widget .label {
+
+  font-size: 14px;
+
+}
+
+.dark .weather-widget .label.alt {
+
+  font-size: 12px;
+  color: #bac2de;
+
+}
+
+.dark .weather-widget .icon.sunnyDay {
+
+  color: #f9e2af;
+
+}
+
+.dark .weather-widget .icon.clearNight {
+
+  color: #b4befe;
+
+}
+
+.dark .weather-widget .icon.cloudyDay, .dark .weather-widget .icon.cloudyNight {
+
+  color: #7f849c;
+
+}
+
+.dark .weather-widget .icon.rainyDay, .dark .weather-widget .icon.rainyNight {
+
+  color: #89dceb;
+
+}
+
+.dark .weather-widget .icon.snowyDay, .dark .weather-widget .icon.snowyNight {
+
+  color: #cdd6f4;
+
+}
+
+.dark .weather-widget .icon.blizzardDay, .dark .weather-widget .icon.blizzardNight {
+
+  color: #a6adc8;
+
+}
+
+.dark .weather-widget .icon.foggyDay, .dark .weather-widget .icon.foggyNight {
+
+  color: #585b70;
+
+}
+
+.dark .weather-widget .icon.thunderstormDay, .dark .weather-widget .icon.thunderstormNight {
+
+  color: #cba6f7;
+
+}
+
+.dark .weather-widget .icon.default {
+
+  color: #9399b2;
+
+}
+
+.dark .weather-card {
+
+  background-color: rgba(17, 17, 27, 0.5);
+
+}
+
+.dark .weather-card-today {
+
+  border: 1px solid #282936;
+  border-radius: 8px;
+  background-color: rgba(17, 17, 27, 0.2);
+
+}
+
+.dark .weather-card-today .label {
+
+  font-size: 12px;
+
+}
+
+.dark .weather-card-today .label.location {
+
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+.dark .weather-card-today .label.alert {
+
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(247, 199, 42, 0.05);
+  border: 1px solid rgba(247, 209, 42, 0.1);
+  color: rgba(196, 181, 162, 0.85);
+  border-radius: 6px;
+  padding: 5px 0;
+
+}
+
+.dark .weather-card-day {
+
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  background-color: rgba(17, 17, 27, 0.2);
+
+}
+
+.dark .weather-card-day.active {
+
+  background-color: rgba(40, 40, 60, 0.6);
+  border: 1px solid rgba(50, 50, 75, 1);
+
+}
+
+.dark .weather-card-day:hover {
+
+  background-color: rgba(40, 40, 60, 0.6);
+
+}
+
+.dark .weather-card-day .label {
+
+  font-size: 12px;
+
+}
+
+.dark .weather-card .hourly-container {
+
+  border: 1px solid #282936;
+  background-color: #3c5fa0;
+  border-radius: 8px;
+  min-height: 150px;
+
+}
+
+.dark .weather-card .hourly-data {
+
+  /* font-family: 'Segoe UI';*/
+  /* color: cyan;*/
+  /* <- Font color */
+  background-color: #fae93f;
+  /* <- Curve color */
+  font-size: 12px;
+  font-weight: bold;
+
+}
+
+.dark .active-window-widget {
+
+  background-color: #282936;
+
+}
+
+.dark .active-window-widget .label {
+
+  font-size: 14px;
+
+}
+
+.dark .active-window-widget .icon {
+
+  padding-right: 6px;
+  border: none;
+
+}
+
+.dark .taskbar-widget {
+
+  background-color: #282936;
+
+}
+
+.dark .taskbar-widget .app-icon {
+
+  /* padding: 0 4px; */
+  background: transparent;
+  border-radius: 10%;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.dark .taskbar-widget .app-icon:hover {
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.dark .taskbar-widget .app-icon.foreground {
+
+  background-color: #585b70;
+  border: 1px solid #6c7086;
+
+}
+
+.dark .taskbar-widget .app-icon.foreground:hover {
+
+  background-color: #7f849c;
+
+}
+
+.dark .taskbar-widget .app-title {
+
+  font-size: 12px;
+  color: #cdd6f4;
+  padding: 0 4px;
+
+}
+
+.dark .taskbar-widget .app-title.foreground {
+
+  color: #cdd6f4;
+  font-weight: 700;
+
+}
+
+.dark .clock-widget {
+
+  background-color: #282936;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.dark .clock-widget .label {
+
+  font-size: 14px;
+
+}
+
+.dark .calendar {
+
+  background-color: rgba(24, 24, 37, 0.5);
+
+}
+
+.dark .calendar .calendar-table, .dark .calendar .calendar-table::item {
+
+  background-color: rgba(17, 17, 27, 0);
+  color: rgba(162, 177, 196, 0.85);
+  font-family: "Segoe UI";
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+
+}
+
+.dark .calendar .calendar-table::item:selected {
+
+  color: rgb(255, 255, 255);
+
+}
+
+.dark .calendar .day-label {
+
+  margin-top: 20px;
+
+}
+
+.dark .calendar .day-label, .dark .calendar .month-label, .dark .calendar .date-label {
+
+  font-family: "Segoe UI";
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  min-width: 180px;
+  max-width: 180px;
+
+}
+
+.dark .calendar .month-label {
+
+  font-weight: normal;
+
+}
+
+.dark .calendar .date-label {
+
+  font-size: 88px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin-top: -20px;
+
+}
+
+.dark .disk-widget {
+
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: #282936;
+
+}
+
+.dark .disk-group {
+
+  background-color: rgba(24, 24, 37, 0.5);
+
+}
+
+.dark .disk-group-row {
+
+  min-width: 220px;
+  max-width: 220px;
+  max-height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0);
+
+}
+
+.dark .disk-group-row:hover {
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.dark .disk-group-label-bar {
+
+  max-height: 8px;
+  border: 0px solid rgba(128, 128, 128, 0);
+  background-color: rgba(148, 226, 213, 0.3);
+  border-radius: 4px;
+
+}
+
+.dark .disk-group-label-bar::chunk {
+
+  background-color: rgba(148, 226, 213, 1);
+  border-radius: 4px;
+
+}
+
+.dark .disk-group-label {
+
+  font-size: 13px;
+
+}
+
+.dark .disk-group-label-size {
+
+  font-size: 12px;
+  color: rgba(205, 214, 244, 0.5);
+
+}
+
+.dark .volume-widget {
+
+  padding-right: 9px;
+  padding-left: 5px;
+  background-color: #282936;
+
+}
+
+.dark .volume-widget .icon {
+
+  padding: 0 6px;
+  color: #94e2d5;
+
+}
+
+.dark .volume-widget .label {
+
+  font-size: 14px;
+
+}
+
+.dark .audio-menu {
+
+  background-color: rgba(24, 24, 37, 0.5);
+
+}
+
+.dark .audio-container .device {
+
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+
+}
+
+.dark .audio-container .device.selected {
+
+  background-color: rgba(255, 255, 255, 0.085);
+
+}
+
+.dark .audio-container .device:hover {
+
+  background-color: rgba(255, 255, 255, 0.06);
+
+}
+
+.dark .microphone-widget {
+
+  background-color: #282936;
+
+}
+
+.dark .microphone-widget .icon {
+
+  padding: 0 4px;
+  font-size: 14px;
+  color: #94e2d5;
+
+}
+
+.dark .microphone-widget .icon.muted {
+
+  color: #7f849c;
+
+}
+
+.dark .microphone-widget .label {
+
+  font-size: 12px;
+  color: #cdd6f4;
+
+}
+
+.dark .microphone-widget .label.muted {
+
+  color: #7f849c;
+
+}
+
+.dark .microphone-slider {
+
+  border: none;
+  background: transparent;
+
+}
+
+.dark .microphone-slider::groove {
+
+  background: #282936;
+  height: 4px;
+  border-radius: 2px;
+
+}
+
+.dark .microphone-slider::handle {
+
+  background: #94e2d5;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  margin: -6px 0;
+
+}
+
+.dark .microphone-slider::handle:hover {
+
+  background: #74c7ec;
+
+}
+
+.dark .microphone-slider::sub-page {
+
+  background: #94e2d5;
+  border-radius: 2px;
+
+}
+
+.dark .media-widget {
+
+  padding: 0;
+  padding-right: 10px;
+  background-color: #282936;
+
+}
+
+.dark .media-widget .label {
+
+  font-size: 14px;
+  padding: 0 0px;
+  margin-left: 6px;
+
+}
+
+.dark .media-widget .label.alt {
+
+  font-size: 12px;
+  color: #bac2de;
+
+}
+
+.dark .media-widget .btn {
+
+  color: #b4befe;
+  padding: 0 4px;
+  margin: 0;
+  font-family: "Segoe Fluent Icons";
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dark .media-widget .btn:hover {
+
+  color: #cdd6f4;
+
+}
+
+.dark .media-widget .btn.play {
+
+  color: #a6e3a1;
+  font-size: 16px;
+
+}
+
+.dark .media-widget .btn.play:hover {
+
+  color: #94e2d5;
+
+}
+
+.dark .media-widget .btn.disabled:hover, .dark .media-widget .btn.disabled {
+
+  color: #6c7086;
+  background-color: transparent;
+
+}
+
+.dark .media-widget .icon {
+
+  padding: 0 6px;
+
+}
+
+.dark .media-menu {
+
+  min-width: 420px;
+  max-width: 420px;
+  background-color: rgba(24, 24, 37, 0.5);
+  border: 1px solid #282936;
+  border-radius: 12px;
+  padding: 12px;
+
+}
+
+.dark .media-menu .title, .dark .media-menu .artist, .dark .media-menu .source {
+
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #cdd6f4;
+
+}
+
+.dark .media-menu .artist {
+
+  font-size: 13px;
+  color: #bac2de;
+  margin-top: 0px;
+  margin-bottom: 8px;
+
+}
+
+.dark .media-menu .source {
+
+  font-size: 11px;
+  color: #1e1e2e;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: #a6adc8;
+  padding: 2px 4px;
+
+}
+
+.dark .media-menu .source.spotify {
+
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+
+}
+
+.dark .media-menu .source.firefox {
+
+  background-color: #f38ba8;
+  color: #cdd6f4;
+
+}
+
+.dark .media-menu .source.edge {
+
+  background-color: #89b4fa;
+  color: #cdd6f4;
+
+}
+
+.dark .media-menu .source.chrome {
+
+  background-color: #f9e2af;
+  color: #1e1e2e;
+
+}
+
+.dark .media-menu .source.windows-media {
+
+  background-color: #74c7ec;
+  color: #cdd6f4;
+
+}
+
+.dark .media-menu .btn {
+
+  font-family: "Segoe Fluent Icons";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 2px 0px 2px;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #585b70;
+  color: #cdd6f4;
+  cursor: pointer;
+
+}
+
+.dark .media-menu .btn.prev {
+
+  margin-left: 10px;
+
+}
+
+.dark .media-menu .btn:hover {
+
+  color: #cdd6f4;
+  background-color: #282936;
+  border-color: #282936;
+
+}
+
+.dark .media-menu .btn.play {
+
+  background-color: #a6e3a1;
+  border-color: #a6e3a1;
+  color: #1e1e2e;
+  font-size: 20px;
+
+}
+
+.dark .media-menu .btn.play:hover {
+
+  background-color: #94e2d5;
+  border-color: #94e2d5;
+
+}
+
+.dark .media-menu .btn.disabled:hover, .dark .media-menu .btn.disabled {
+
+  color: #6c7086;
+  background-color: transparent;
+  border-color: var(--surface0);
+  cursor: not-allowed;
+
+}
+
+.dark .media-menu .playback-time {
+
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #bac2de;
+  margin-top: 20px;
+  min-width: 100px;
+
+}
+
+.dark .media-menu .progress-slider {
+
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
+
+}
+
+.dark .media-menu .progress-slider::groove {
+
+  background: transparent;
+  height: 2px;
+  border-radius: 3px;
+  background: #282936;
+
+}
+
+.dark .media-menu .progress-slider::groove:hover {
+
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: #585b70;
+
+}
+
+.dark .media-menu .progress-slider::sub-page {
+
+  background: #94e2d5;
+  border-radius: 3px;
+  height: 4px;
+
+}
+
+.dark .wallpapers-widget {
+
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: #282936;
+
+}
+
+.dark .systray {
+
+  background-color: #282936;
+  padding: 0 4px;
+  margin: 0;
+  border-radius: 12px;
+
+}
+
+.dark .systray .widget-container {
+
+  background: transparent;
+  padding: 0;
+
+}
+
+.dark .systray .unpinned-container {
+
+  background-color: #585b70;
+  border: 1px solid #6c7086;
+  border-radius: 8px;
+  padding: 2px;
+  margin-right: 4px;
+
+}
+
+.dark .systray .pinned-container {
+
+  background: transparent;
+  padding: 0;
+
+}
+
+.dark .systray .pinned-container[forceshow="true"] {
+
+  background-color: #585b70;
+  border: 1px solid #89b4fa;
+  border-radius: 8px;
+  padding: 2px;
+
+}
+
+.dark .systray .button {
+
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 2px;
+  margin: 0 1px;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.dark .systray .button:hover {
+
+  background-color: #7f849c;
+
+}
+
+.dark .systray .button[dragging="true"] {
+
+  background-color: #fab387;
+  border: 1px solid #f9e2af;
+
+}
+
+.dark .systray .unpinned-visibility-btn {
+
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #cdd6f4;
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 0 2px;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.dark .systray .unpinned-visibility-btn:hover {
+
+  background-color: #7f849c;
+  color: #cdd6f4;
+
+}
+
+.dark .systray .unpinned-visibility-btn:checked {
+
+  background-color: #585b70;
+  color: #89b4fa;
+
+}
+
+.dark .wallpapers-gallery-window {
+
+  background-color: rgba(24, 24, 37, 0.5);
+  border: 0;
+  margin: 0;
+
+}
+
+.dark .wallpapers-gallery-buttons {
+
+  font-size: 12px;
+  font-family: "Bahnschrift";
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: none;
+  font-size: 14px;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin: 0 8px 8px 8px;
+  width: 600px;
+
+}
+
+.dark .wallpapers-gallery-buttons:hover {
+
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.dark .wallpapers-gallery-image {
+
+  border: 4px solid transparent;
+  border-radius: 10px;
+
+}
+
+.dark .wallpapers-gallery-image:hover {
+
+  border: 4px solid rgb(66, 68, 83);
+
+}
+
+.dark .wallpapers-gallery-image.focused {
+
+  border: 4px solid #89b4fa;
+
+}
+
+.dark .power-menu-widget {
+
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: #282936;
+
+}
+
+.dark .power-menu-widget .label {
+
+  color: #f38ba8;
+  font-size: 16px;
+
+}
+
+.dark .uptime {
+
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: rgba(191, 202, 219, 0.726);
+  font-weight: 700;
+  font-family: "Bahnschrift";
+
+}
+
+.dark .power-menu-popup .button {
+
+  padding: 0;
+  width: 160px;
+  height: 240px;
+  border-radius: 4px;
+  background-color: rgba(41, 42, 58, 0.75);
+  font-family: "Bahnschrift";
+  color: white;
+  border: 4px solid rgba(255, 255, 255, 0);
+
+}
+
+.dark .power-menu-popup .button.hover {
+
+  background-color: rgb(55, 56, 75);
+  border: 4px solid rgb(55, 56, 75);
+
+}
+
+.dark .power-menu-popup .button .label {
+
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Bahnschrift";
+
+}
+
+.dark .power-menu-popup .button .icon {
+
+  font-size: 64px;
+  padding-top: 54px;
+  color: rgba(255, 255, 255, 0.25);
+
+}
+
+.dark .power-menu-popup .button.cancel .icon {
+
+  color: rgba(243, 139, 168, 0.55);
+
+}
+
+.dark .power-menu-popup .button.cancel .label {
+
+  color: rgba(243, 139, 168, 0.95);
+
+}
+
+.dark .cava-widget {
+
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #282936;
+
+}
+
+.dark .pomodoro-widget {
+
+  background-color: #282936;
+
+}
+
+.dark .pomodoro-widget .icon {
+
+  font-size: 12px;
+  padding: 0 4px;
+
+}
+
+.dark .pomodoro-widget .label {
+
+  color: #cdd6f4;
+
+}
+
+.dark .pomodoro-widget .label.work, .dark .pomodoro-widget .icon.work {
+
+  color: #a6e3a1;
+
+}
+
+.dark .pomodoro-widget .label.break, .dark .pomodoro-widget .icon.break {
+
+  color: #89b4fa;
+
+}
+
+.dark .pomodoro-widget .label.paused, .dark .pomodoro-widget .icon.paused {
+
+  color: #7f849c;
+
+}
+
+.dark .pomodoro-menu .header {
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #cdd6f4;
+  font-family: "Segoe UI";
+  margin-bottom: 8px;
+
+}
+
+.dark .pomodoro-menu .status {
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #cdd6f4;
+  font-family: "Segoe UI";
+  margin-bottom: 4px;
+
+}
+
+.dark .pomodoro-menu .session {
+
+  font-size: 12px;
+  color: #bac2de;
+  font-family: "Segoe UI";
+  margin-bottom: 12px;
+
+}
+
+.dark .pomodoro-menu .button {
+
+  background-color: #585b70;
+  color: #cdd6f4;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Segoe UI";
+  margin: 2px 4px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.dark .pomodoro-menu .button:hover {
+
+  background-color: #7f849c;
+  transform: translateY(-1px);
+
+}
+
+.dark .pomodoro-menu .button:pressed {
+
+  background-color: #6c7086;
+  transform: translateY(0);
+
+}
+
+.dark .pomodoro-menu .button.start {
+
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+
+}
+
+.dark .pomodoro-menu .button.start:hover {
+
+  background-color: #94e2d5;
+
+}
+
+.dark .pomodoro-menu .button.pause {
+
+  background-color: #fab387;
+  color: #1e1e2e;
+
+}
+
+.dark .pomodoro-menu .button.pause:hover {
+
+  background-color: #f9e2af;
+
+}
+
+.dark .pomodoro-menu .button.reset {
+
+  background-color: #f38ba8;
+  color: #1e1e2e;
+
+}
+
+.dark .pomodoro-menu .button.reset:hover {
+
+  background-color: #eba0ac;
+
+}
+
+.dark .github-widget {
+
+  padding-right: 7px;
+  padding-left: 7px;
+  background-color: #282936;
+
+}
+
+.dark .github-widget .icon {
+
+  font-size: 16px;
+
+}
+
+.dark .github-menu {
+
+  background-color: rgba(17, 17, 27, 0.2);
+  max-height: 500px;
+  min-height: 500px;
+  min-width: 420px;
+
+}
+
+.dark .github-menu .header {
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Segoe UI";
+  padding: 8px;
+  color: white;
+  background-color: rgba(17, 17, 27, 0.75);
+
+}
+
+.dark .github-menu .footer {
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  padding: 4px 8px 6px 8px;
+  font-family: "Segoe UI";
+  color: #9399b2;
+  background-color: rgba(17, 17, 27, 0.75);
+
+}
+
+.dark .github-menu .contents {
+
+  background-color: rgba(17, 17, 27, 0.2);
+
+}
+
+.dark .github-menu .contents .item {
+
+  min-height: 40px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+
+}
+
+.dark .github-menu .contents .item:hover {
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+}
+
+.dark .github-menu .contents .item .title, .dark .github-menu .contents .item .description {
+
+  color: #9399b2;
+  font-family: Segoe UI;
+
+}
+
+.dark .github-menu .contents .item .title {
+
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.dark .github-menu .contents .item .description {
+
+  font-size: 12px;
+  font-weight: 500;
+
+}
+
+.dark .github-menu .contents .item.new .title, .dark .github-menu .contents .item.new .description {
+
+  color: #ffffff;
+
+}
+
+.dark .github-menu .contents .item .icon {
+
+  font-size: 16px;
+  padding-right: 0;
+  padding-left: 8px;
+  padding-right: 4px;
+  color: #9399b2;
+
+}
+
+.dark .github-menu .contents .item.new .icon {
+
+  color: #3fb950;
+
+}
+
+.dark .todo-widget {
+
+  background-color: #282936;
+  padding: 0 6px 0 6px;
+
+}
+
+.dark .todo-widget .icon {
+
+  color: #00f8d7;
+  padding: 0;
+
+}
+
+.dark .todo-widget .label {
+
+  font-size: 12px;
+  padding: 0;
+
+}
+
+.dark .todo-widget {
+
+  padding: 0 6px 0 6px;
+
+}
+
+.dark .todo-widget .icon {
+
+  color: #00f8d7;
+  padding: 0;
+
+}
+
+.dark .todo-widget .label {
+
+  font-size: 12px;
+  padding: 0;
+
+}
+
+.dark .todo-menu {
+
+  background-color: rgba(24, 25, 27, 0.8);
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 500px;
+  max-height: 500px;
+
+}
+
+.dark .todo-menu .header {
+
+  margin: 16px 10px;
+
+}
+
+.dark .todo-menu .header .add-task-button, .dark .todo-menu .header .tab-buttons {
+
+  border: none;
+  border-radius: 13px;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px;
+  font-family: "Segoe UI", "JetBrainsMono NFP";
+
+}
+
+.dark .todo-menu .header .tab-buttons {
+
+  margin: 0;
+  font-size: 12px;
+  background-color: red;
+
+}
+
+.dark .todo-menu .header .add-task-button:hover {
+
+  background-color: #0f91e7;
+
+}
+
+.dark .todo-menu .header .tab-buttons.in-progress, .dark .todo-menu .header .tab-buttons.completed {
+
+  background-color: transparent;
+
+}
+
+.dark .todo-menu .header .tab-buttons.in-progress:checked {
+
+  color: #7fffd4;
+
+}
+
+.dark .todo-menu .header .tab-buttons.completed:checked {
+
+  color: #ff583b;
+
+}
+
+.dark .todo-menu .header .tab-buttons.sort {
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  padding: 0;
+  margin: 0 8px 0 0;
+  font-family: "JetBrainsMono NFP";
+
+}
+
+.dark .todo-menu .header .tab-buttons.sort:pressed {
+
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.dark .todo-menu .header .tab-buttons.filter {
+
+  color: red;
+  background-color: red;
+
+}
+
+.dark .todo-menu .no-tasks {
+
+  font-family: "Segoe UI";
+  font-size: 18px;
+  color: #979fa0;
+  font-weight: 400;
+  margin-top: 16px;
+
+}
+
+.dark .todo-menu .no-tasks-icon {
+
+  font-size: 80px;
+  color: #979fa0;
+  font-family: "JetBrainsMono NFP";
+  margin-top: 64px;
+  font-weight: 400;
+
+}
+
+.dark .todo-menu .task-item {
+
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0px 12px 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 0;
+
+}
+
+.dark .todo-menu .task-item.expanded {
+
+  background-color: rgba(211, 214, 219, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.dark .todo-menu .task-item.drop-highlight, .dark .todo-menu .task-item.drop-highlight:hover, .dark .todo-menu .task-item.drop-highlight:focus {
+
+  background-color: rgba(0, 120, 212, 0.26);
+  border: 1px solid #007acc;
+
+}
+
+.dark .todo-menu .task-item .title {
+
+  color: #ebebeb;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Segoe UI";
+  padding: 0 8px 8px 8px;
+  margin-top: 6px;
+
+}
+
+.dark .todo-menu .task-item.completed .title, .dark .todo-menu .task-item.completed .description {
+
+  text-decoration: line-through;
+  color: #7f8c8d;
+
+}
+
+.dark .todo-menu .task-item .description {
+
+  color: #bdc3c7;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 8px 8px 8px;
+  font-family: "Segoe UI";
+
+}
+
+.dark .todo-menu .task-checkbox {
+
+  background-color: transparent;
+  border: none;
+  margin-left: 12px;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #ebebeb;
+  font-family: "JetBrainsMono NFP";
+
+}
+
+.dark .todo-menu .task-checkbox:checked {
+
+  color: #7f8c8d;
+
+}
+
+.dark .todo-menu .task-info-row {
+
+  margin-left: 8px;
+  margin-bottom: 8px;
+
+}
+
+.dark .todo-menu .task-info-row .date-text, .dark .todo-menu .task-info-row .category-text {
+
+  font-family: "Segoe UI";
+  font-weight: 700;
+  color: #7e7f88;
+  font-size: 13px;
+  padding-left: 0px;
+  margin-right: 12px;
+
+}
+
+.dark .todo-menu .task-info-row .date-icon, .dark .todo-menu .task-info-row .category-icon {
+
+  font-weight: 400;
+  color: #a7a8b3;
+  font-size: 14px;
+  font-family: "JetBrainsMono NFP";
+  margin-top: 1px;
+
+}
+
+.dark .todo-menu .task-info-row .category-text.important, .dark .todo-menu .task-info-row .category-icon.important {
+
+  color: #ff2600;
+
+}
+
+.dark .todo-menu .task-info-row .category-text.urgent, .dark .todo-menu .task-info-row .category-icon.urgent {
+
+  color: #ff583b;
+
+}
+
+.dark .todo-menu .task-info-row .category-text.soon, .dark .todo-menu .task-info-row .category-icon.soon {
+
+  color: #7fffd4;
+
+}
+
+.dark .todo-menu .task-info-row .category-text.today, .dark .todo-menu .task-info-row .category-icon.today {
+
+  color: #f9e2af;
+
+}
+
+.dark .todo-menu .task-info-row .delete-task-button {
+
+  background-color: rgb(165, 70, 38);
+  color: #000000;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 8px;
+  border-radius: 10px;
+  min-height: 20px;
+  max-height: 20px;
+  margin-right: 8px;
+
+}
+
+.dark .todo-menu .task-info-row .edit-task-button {
+
+  background-color: rgb(160, 160, 160);
+  color: #000000;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 8px;
+  border-radius: 10px;
+  min-height: 20px;
+  max-height: 20px;
+  margin-right: 8px;
+
+}
+
+.dark .todo-menu .app-dialog {
+
+  font-family: "Segoe UI";
+  background-color: #202020;
+
+}
+
+.dark .todo-menu .app-dialog .buttons-container {
+
   background-color: #171717;
   margin-top: 16px;
   border-top: 1px solid #000;
   max-height: 80px;
   min-height: 80px;
   padding: 0 20px 0 20px;
+
 }
 
-.todo-menu .app-dialog .title-field,
-.todo-menu .app-dialog .desc-field {
+.dark .todo-menu .app-dialog .title-field, .dark .todo-menu .app-dialog .desc-field {
+
   background-color: #181818;
   border: 1px solid #303030;
   border-radius: 4px;
@@ -1345,18 +3746,23 @@
   color: #ffffff;
   margin: 10px 0px 5px 0;
   min-height: 30px;
+
 }
 
-.todo-menu .app-dialog .desc-field {
+.dark .todo-menu .app-dialog .desc-field {
+
   max-height: 60px;
+
 }
 
-.todo-menu .app-dialog .title-field:focus,
-.todo-menu .app-dialog .desc-field:focus {
+.dark .todo-menu .app-dialog .title-field:focus, .dark .todo-menu .app-dialog .desc-field:focus {
+
   border-bottom-color: #4cc2ff;
+
 }
 
-.todo-menu .app-dialog .button {
+.dark .todo-menu .app-dialog .button {
+
   background-color: #2d2d2d;
   border: none;
   border-radius: 4px;
@@ -1369,40 +3775,54 @@
   margin: 10px 0 5px 6px;
   min-height: 28px;
   outline: none;
+
 }
 
-.todo-menu .app-dialog .buttons-container .button {
+.dark .todo-menu .app-dialog .buttons-container .button {
+
   margin: 10px 0 5px 0px;
   font-size: 13px;
+
 }
 
-.todo-menu .app-dialog .button:focus {
+.dark .todo-menu .app-dialog .button:focus {
+
   border: 2px solid #adadad;
+
 }
 
-.todo-menu .app-dialog .button:focus,
-.todo-menu .app-dialog .button:hover {
+.dark .todo-menu .app-dialog .button:focus, .dark .todo-menu .app-dialog .button:hover {
+
   background-color: #4a4a4a;
+
 }
 
-.todo-menu .app-dialog .button:pressed {
+.dark .todo-menu .app-dialog .button:pressed {
+
   background-color: #3a3a3a;
+
 }
 
-.todo-menu .app-dialog .button.add {
+.dark .todo-menu .app-dialog .button.add {
+
   background-color: #0078d4;
+
 }
 
-.todo-menu .app-dialog .button.add:focus,
-.todo-menu .app-dialog .button.add:hover {
+.dark .todo-menu .app-dialog .button.add:focus, .dark .todo-menu .app-dialog .button.add:hover {
+
   background-color: #0066b2;
+
 }
 
-.todo-menu .app-dialog .button.add:pressed {
+.dark .todo-menu .app-dialog .button.add:pressed {
+
   background-color: #00509e;
+
 }
 
-.todo-menu .app-dialog .warning-message {
+.dark .todo-menu .app-dialog .warning-message {
+
   background-color: #2b0b0e;
   border: 1px solid #5a303c;
   border-radius: 4px;
@@ -1412,9 +3832,11 @@
   font-weight: 700;
   padding: 8px 12px;
   margin: 4px 0px;
+
 }
 
-.todo-menu .app-dialog .category-button {
+.dark .todo-menu .app-dialog .category-button {
+
   background-color: #2d2d2d;
   border: none;
   border-radius: 4px;
@@ -1426,115 +3848,153 @@
   margin-top: 8px;
   min-height: 24px;
   outline: none;
+
 }
 
-.todo-menu .app-dialog .category-button:checked {
+.dark .todo-menu .app-dialog .category-button:checked {
+
   background-color: #535353;
   color: #ffffff;
+
 }
 
-/* Global context menu style */
-.context-menu,
-.context-menu .menu-checkbox {
+.dark .context-menu, .dark .context-menu .menu-checkbox {
+
   background-color: #202020;
   border: none;
   padding: 4px 0px;
   font-family: "Segoe UI";
   font-size: 12px;
   color: #ffffff;
+
 }
 
-.context-menu::right-arrow {
+.dark .context-menu::right-arrow {
+
   width: 8px;
   height: 8px;
   padding-right: 24px;
+
 }
 
-.context-menu::item,
-.context-menu .menu-checkbox {
+.dark .context-menu::item, .dark .context-menu .menu-checkbox {
+
   background-color: transparent;
   padding: 6px 12px;
   margin: 2px 6px;
   border-radius: 6px;
   min-width: 100px;
+
 }
 
-.context-menu::item:selected,
-.context-menu .menu-checkbox:hover {
+.dark .context-menu::item:selected, .dark .context-menu .menu-checkbox:hover {
+
   background-color: #3a3a3a;
   color: #ffffff;
+
 }
 
-.context-menu::separator {
+.dark .context-menu::separator {
+
   height: 1px;
   background-color: #404040;
   margin: 4px 8px;
+
 }
 
-.context-menu::item:disabled {
+.dark .context-menu::item:disabled {
+
   color: #666666;
   background-color: transparent;
+
 }
 
-.context-menu .menu-checkbox .checkbox {
+.dark .context-menu .menu-checkbox .checkbox {
+
   border: none;
   padding: 8px 16px;
   font-size: 12px;
   margin: 0;
   color: #ffffff;
   font-family: "Segoe UI";
+
 }
 
-.context-menu .submenu::item:disabled {
+.dark .context-menu .submenu::item:disabled {
+
   margin: 0;
   padding-left: 16px;
+
 }
 
-.context-menu .menu-checkbox .checkbox:unchecked {
+.dark .context-menu .menu-checkbox .checkbox:unchecked {
+
   color: #999;
+
 }
 
-.context-menu .menu-checkbox .checkbox::indicator {
+.dark .context-menu .menu-checkbox .checkbox::indicator {
+
   width: 12px;
   height: 12px;
   margin-left: 0px;
   margin-right: 8px;
+
 }
 
-.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+.dark .context-menu .menu-checkbox .checkbox::indicator:unchecked {
+
   background: #444444;
   border-radius: 2px;
+
 }
 
-.context-menu .menu-checkbox .checkbox::indicator:checked {
+.dark .context-menu .menu-checkbox .checkbox::indicator:checked {
+
   background: #007acc;
   border-radius: 2px;
+
 }
 
-.context-menu .menu-checkbox .checkbox:focus {
+.dark .context-menu .menu-checkbox .checkbox:focus {
+
   outline: none;
+
 }
 
-.context-menu::item:checked {
+.dark .context-menu::item:checked {
+
   background-color: #0078d7;
   color: white;
+
 }
-/* MICROPHONE MENU - match volume menu for consistency */
-.microphone-menu {
-  background-color: var(--mantle);
+
+.dark .microphone-menu {
+
+  background-color: rgba(24, 24, 37, 0.5);
+
 }
-.microphone-menu .microphone-container .device {
+
+.dark .microphone-menu .microphone-container .device {
+
   font-size: 12px;
   background-color: transparent;
   border: none;
   padding: 6px 8px 6px 4px;
   margin: 2px 0;
   border-radius: 4px;
-  color: var(--text);
+  color: #cdd6f4;
+
 }
-.microphone-menu .microphone-container .device.selected {
+
+.dark .microphone-menu .microphone-container .device.selected {
+
   background-color: rgba(255, 255, 255, 0.085);
+
 }
-.microphone-menu .microphone-container .device:hover {
+
+.dark .microphone-menu .microphone-container .device:hover {
+
   background-color: rgba(255, 255, 255, 0.06);
+
 }
