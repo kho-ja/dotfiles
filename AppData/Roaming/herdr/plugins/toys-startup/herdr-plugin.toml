@@ -1,0 +1,15 @@
+id = "toys.startup"
+name = "Terminal Toys"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Build and refresh the terminal-toys showroom (pipes, matrix rain, lolcat, cowsay, neofetch) on server start"
+platforms = ["windows"]
+
+[[startup]]
+command = ["pwsh", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "toys.ps1"]
+
+[[actions]]
+id = "apply"
+title = "Apply toys layout"
+contexts = ["workspace"]
+command = ["pwsh", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "toys.ps1"]
