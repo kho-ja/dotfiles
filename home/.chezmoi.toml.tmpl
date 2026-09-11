@@ -1,0 +1,8 @@
+{{- $profile := promptChoiceOnce . "profile" "Which profile are you setting up?" (list "home" "work") -}}
+[data]
+  profile = {{- quote $profile }}
+
+[hooks]
+  [hooks.apply.post]
+    command = "powershell"
+    args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "{{ replace "\\" "/" (joinPath .chezmoi.homeDir ".config" "restart-yasb.ps1") }}"]

@@ -1,0 +1,12 @@
+# Runtime / session state - never sync, never re-add
+.ssh/known_hosts*
+*.sock
+session.json
+.plugins.lock
+**/*.tmp
+AppData/Roaming/herdr/*.log
+
+# Secrets - never re-add
+**/auth.json
+**/credentials.json
+**/.credentials.json

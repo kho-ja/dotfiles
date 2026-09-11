@@ -1,1 +1,1 @@
-Pictures/Wallpapers/** filter=lfs diff=lfs merge=lfs -text
+**/Pictures/Wallpapers/** filter=lfs diff=lfs merge=lfs -text

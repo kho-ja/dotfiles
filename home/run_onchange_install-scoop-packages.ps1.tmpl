@@ -1,0 +1,16 @@
+$ErrorActionPreference = "Stop"
+
+# Install scoop packages from .chezmoidata/packages.yaml.
+# run_onchange_ - re-runs only when the source template changes (e.g. list edits).
+
+$packages = @(
+{{- range .scoop }}
+    "{{ . }}"
+{{- end }}
+)
+
+if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
+    throw "scoop is not installed - run the bootstrap script first"
+}
+
+scoop install $packages

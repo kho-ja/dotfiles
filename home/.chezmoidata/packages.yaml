@@ -1,0 +1,10 @@
+scoop:
+  - cowsay
+  - figlet
+  - neo-cowsay
+  - pipes-rs
+winget_setup:
+  - twpayne.chezmoi
+  - Git.Git
+  - Microsoft.PowerShell
+  - Herdr.Herdr.Preview
