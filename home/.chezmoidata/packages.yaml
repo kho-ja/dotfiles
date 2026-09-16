@@ -3,6 +3,7 @@ scoop:
   - figlet
   - neo-cowsay
   - pipes-rs
+  - z
 winget_setup:
   - twpayne.chezmoi
   - Git.Git
