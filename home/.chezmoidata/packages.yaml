@@ -1,6 +1,7 @@
 scoop:
   - cowsay
   - figlet
+  - lazygit
   - neo-cowsay
   - pipes-rs
   - z

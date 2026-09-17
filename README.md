@@ -13,6 +13,7 @@ nothing in this README ever ends up in your home directory.
 | Terminal | `~/.config/windows-terminal/settings.json` |
 | Shell | PowerShell profiles (`~/.config/powershell/user_profile.ps1`, `Documents/PowerShell/Microsoft.PowerShell_profile.ps1`) |
 | Prompt | `~/.config/oh-my-posh/theme.omp.json` |
+| Git TUI | `~/.config/lazygit/config.yml`, `lg` alias in the shell profile |
 | Window manager | `~/komorebi.json`, `~/komorebi.bar.json`, `~/applications.json`, `~/.config/whkdrc` |
 | Bar | `~/.config/yasb/config.yaml`, `~/.config/yasb/styles.css` |
 | Wallpapers | `~/Pictures/Wallpapers/**` (Git LFS) |
@@ -41,7 +42,7 @@ The first `chezmoi apply` runs a one-time bootstrap that installs only what runn
 itself needs, so it works from a bare machine:
 
 - **winget**: `twpayne.chezmoi`, `Git.Git`, `Microsoft.PowerShell`, `Herdr.Herdr.Preview`
-- **scoop** (+ `extras` bucket), then the toys: `cowsay`, `figlet`, `neo-cowsay`, `pipes-rs`
+- **scoop** (+ `extras` bucket), then the toys (`cowsay`, `figlet`, `neo-cowsay`, `pipes-rs`) plus `lazygit`
 
 Everything else is installed manually on purpose — see below.
 

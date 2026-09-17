@@ -1,0 +1,18 @@
+gui:
+  showIcons: true
+  border: rounded
+  theme:
+    lightTheme: true
+    activeBorderColor:
+      - "#4e9a06"
+      - bold
+    inactiveBorderColor:
+      - "#2e3436"
+    selectedLineBgColor:
+      - "#b8c6d6"
+    optionsTextColor:
+      - "#3465a4"
+
+git:
+  paging:
+    colorArg: always
